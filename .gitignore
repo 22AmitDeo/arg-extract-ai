@@ -1,0 +1,44 @@
+# === Python Cache and Virtual Env ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+env/
+venv/
+.venv/
+
+# === IDEs ===
+.vscode/
+.idea/
+*.swp
+
+# === OS Generated ===
+.DS_Store
+Thumbs.db
+
+# === Environment and Secrets ===
+.env
+*.key
+*.pem
+token.json
+credentials.json
+
+# === Logs and Output Files ===
+*.log
+*.out
+logs/
+*.tmp
+
+# === Data Artifacts ===
+pdfs/
+extracted_text/
+arguments_output/
+cloud_upload/
+
+# === Jupyter Checkpoints (if using notebooks) ===
+.ipynb_checkpoints/
+
+# === Misc ===
+*.bak
