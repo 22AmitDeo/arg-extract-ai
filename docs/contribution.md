@@ -1,8 +1,6 @@
-# 🧠 Contribution Guide
 
-Follow these steps to contribute to this project:
+# Follow these steps to contribute to the project:
 
----
 
 ## 1. Clone the repository
 
