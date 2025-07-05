@@ -1,44 +1,16 @@
-# === Python Cache and Virtual Env ===
+# Ignore secret environment variables
+.env
+
+# Optional: Ignore typical Python/IDE clutter
 __pycache__/
-*.py[cod]
+*.pyc
 *.pyo
 *.pyd
-*.so
-*.egg-info/
-env/
-venv/
-.venv/
+*.log
 
-# === IDEs ===
+# VS Code settings
 .vscode/
-.idea/
-*.swp
 
-# === OS Generated ===
+# macOS / Windows system files
 .DS_Store
 Thumbs.db
-
-# === Environment and Secrets ===
-.env
-*.key
-*.pem
-token.json
-credentials.json
-
-# === Logs and Output Files ===
-*.log
-*.out
-logs/
-*.tmp
-
-# === Data Artifacts ===
-pdfs/
-extracted_text/
-arguments_output/
-cloud_upload/
-
-# === Jupyter Checkpoints (if using notebooks) ===
-.ipynb_checkpoints/
-
-# === Misc ===
-*.bak
