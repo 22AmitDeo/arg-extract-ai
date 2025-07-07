@@ -1,19 +1,20 @@
 # === PDF Text Extraction ===
 pdfplumber==0.10.2
-PyMuPDF==1.23.6  # for layout-aware extraction
+PyMuPDF==1.23.6  # layout-aware extraction
 
-# === Google Gemini API ===
+# === Gemini LLM Integration ===
 google-generativeai==0.5.2
 google-auth==2.29.0
+python-dotenv==1.0.1  # for loading API keys
 
-# === Cloud Storage ===
+# === Cloud Upload (Google Drive API) ===
 google-api-python-client==2.126.0
 google-auth-oauthlib==1.2.0
 google-auth-httplib2==0.2.0
+PyDrive2==1.17.0  # Preferred maintained fork of PyDrive
 
 # === Utilities ===
+requests==2.32.3
 pandas==2.2.2
 numpy==1.26.4
 tqdm==4.66.4
-requests==2.32.3
-python-dotenv==1.0.1
