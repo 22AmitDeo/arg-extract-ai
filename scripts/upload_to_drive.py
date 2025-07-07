@@ -1,31 +1,26 @@
-
-
-# extracted_text.py
-# text = "This is the extracted text"
-# with open("extracted_output.txt", "w") as f:
-#     f.write(text)
-
-
+# upload_to_drive.py
 
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
+from pathlib import Path
 import os
 
-# Set the path to the directory containing client_secrets.json
-current_dir = os.path.dirname(os.path.abspath(__file__))
-client_secrets_path = os.path.join(current_dir, "client_secrets.json")
+def upload_file_to_drive(filepath):
+    """
+    Uploads a single file to Google Drive using PyDrive.
+    """
+    # Setup Google authentication
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    client_secrets_path = os.path.join(current_dir, "client_secrets.json")
 
-# Set settings manually
-gauth = GoogleAuth()
-gauth.LoadClientConfigFile(client_secrets_path)
-gauth.LocalWebserverAuth()
+    gauth = GoogleAuth()
+    gauth.LoadClientConfigFile(client_secrets_path)
+    gauth.LocalWebserverAuth()
 
-drive = GoogleDrive(gauth)
+    drive = GoogleDrive(gauth)
 
-# Upload file (adjust the filename as needed)
-file_to_upload = os.path.join(current_dir, "extracted_text.txt")
-upload_file = drive.CreateFile({'title': 'uploaded_extracted_text.txt'})
-upload_file.SetContentFile(file_to_upload)
-upload_file.Upload()
+    file_to_upload = drive.CreateFile({'title': Path(filepath).name})
+    file_to_upload.SetContentFile(str(filepath))
+    file_to_upload.Upload()
 
-print("Upload successful.")
+    print(f"[✓] Uploaded to Drive: {filepath}")
